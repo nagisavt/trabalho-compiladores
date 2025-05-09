@@ -72,5 +72,5 @@ make clean
 
 ---
 
-Desenvolvido por [Seu Nome] — UTFPR
+Desenvolvido por Giovanni Verardi Tacchini — UTFPR
 
