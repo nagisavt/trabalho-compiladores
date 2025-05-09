@@ -1,0 +1,17 @@
+x = 50
+y = 25
+if ((x > 10) && (x < 100)) then x = x + 1; else x = y;
+print(x)
+
+
+x = 5
+y = 50
+if ((x < 10) || (y > 100)) then y = y * 2; else y = y / 2;
+print(y)
+
+
+let possivel(x) = x > 0;
+x = 10
+y = 5 - x
+if (possivel(x) && (y < 0)) then x = x + y; else x = x - y;
+print(x)

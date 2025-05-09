@@ -1,0 +1,3 @@
+x = 10
+if (x > 5) then x = x - 5; else x = x + 5;
+if (x == 5) then x = x * 2; else x = x / 2;

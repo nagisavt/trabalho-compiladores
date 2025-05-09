@@ -1,0 +1,16 @@
+x = 0
+y = 20
+for (i = 0; i < 15; i = i + 1) if ((i > 5) && (i < 10)) then print(i); else print(x); ;
+
+x = 10
+y = 0
+for (i = 0; i < 5; i = i + 1) for (j = 0; j < 5; j = j + 1) if ((i > 3) || (j > 3)) then print(i); else print(x); ; ;
+
+erro = 0
+x = 10
+let soma(y) = x + y;
+let cond(i) = (i > 2) && (i < 8);
+let succ(x) = x + 1;
+
+for (i = 0; i <= 10; i = succ(i)) if (cond(i)) then print(soma(y)); else print(erro); ;
+

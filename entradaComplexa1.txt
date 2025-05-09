@@ -1,0 +1,10 @@
+let succ(i) = i + 1;
+
+x = 10
+y = 100
+
+for(i = 0; i < 10; i = succ(i)) if (i < 5) then print(y); else print(i); ;
+
+for(i = 0; i < 3; i = succ(i)) for(j = 0; j < 3; j = succ(j)) print(i); print(j); ;
+
+
