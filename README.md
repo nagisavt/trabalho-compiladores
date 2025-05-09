@@ -1,33 +1,76 @@
-# Trabalho de Compiladores
+# Trabalho Final - Compiladores
 
-Implementação de uma calculadora com analisador léxico (Flex) e sintático (Bison), suportando operadores lógicos `&&`, `||` e estrutura de repetição `for`.
+Este projeto é uma calculadora avançada desenvolvida para a disciplina de **Compiladores**, utilizando **Flex** (analisador léxico), **Bison** (analisador sintático) e **C**. A linguagem aceita expressões matemáticas, operadores lógicos, controle de fluxo e definição de funções.
 
-## Arquivos
+## Funcionalidades
 
-- `calc.l`: analisador léxico
-- `calc.y`: analisador sintático
-- `calc_ast.c`: implementação da árvore sintática abstrata (AST)
+- Operações aritméticas: `+`, `-`, `*`, `/`
+- Operadores lógicos: `&&` (AND), `||` (OR)
+- Comparações: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Comando condicional: `if`, `then`, `else`
+- Laços: `while`, `for`
+- Definição de funções: `let nome(param) = exp`
+- Funções internas: `print`, `sqrt`, `log`, `exp`
+
+## Estrutura de Arquivos
+
+- `calc.l` — analisador léxico (Flex)
+- `calc.y` — analisador sintático (Bison)
+- `calc_ast.c` — construção e avaliação da AST
+- `calc.h` — cabeçalho com definições de estruturas
+- `Makefile` — automação da compilação
+- Arquivos de entrada para testes:
+  - `entradaSimples1.txt`
+  - `entradaSimples2.txt`
+  - `entradaSimples3.txt`
+  - `entradaComplexa1.txt`
+  - `entradaComplexa2.txt`
+  - `entradaComplexa3.txt`
 
 ## Compilação
 
+No terminal (Linux, WSL ou Git Bash):
+
 ```bash
-bison -d calc.y
-flex calc.l
-gcc -o calc calc_ast.c calc.tab.c lex.yy.c -lm
+make
 ```
 
-## Execução
+Isso irá gerar o executável `calc`.
+
+## Execução com arquivos de entrada
+
+Execute passando o arquivo de entrada com redirecionamento:
+
+```bash
+./calc < entradaSimples1.txt
+```
+
+Você pode testar qualquer dos arquivos listados acima.
+
+## Execução interativa
+
+Também é possível usar a calculadora no modo interativo:
 
 ```bash
 ./calc
 ```
 
-Digite expressões diretamente no terminal. Exemplo:
+Digite comandos como:
 
+```c
+let inc(x) = x + 1;
+for(i = 0; i < 10; i = inc(i)) if (i < 5) then print(i); else print(100);
 ```
-for(i = 0; i < 3; i = i + 1) i && 1
+
+## Limpeza
+
+Para remover arquivos gerados:
+
+```bash
+make clean
 ```
 
 ---
 
-Desenvolvido para a disciplina de **Compiladores**.
+Desenvolvido por [Seu Nome] — UTFPR
+
